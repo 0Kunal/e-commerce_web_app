@@ -2,6 +2,7 @@ import FeatureProduct from "./components/FeatureProduct";
 import HeroSection from "./components/HeroSection";
 import Services from "./components/Services";
 import Trusted from "./components/Trusted";
+import Categories from "./components/Categories";
 
 const Home = () => {
   const data = {
@@ -11,7 +12,8 @@ const Home = () => {
   return (
     <>
       <HeroSection myData={data} />
-      <FeatureProduct />
+      {/* <FeatureProduct /> */}
+      <Categories />
       <Services />
       <Trusted />
     </>
