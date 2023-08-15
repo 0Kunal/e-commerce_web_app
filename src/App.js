@@ -9,6 +9,8 @@ import SingleProduct from "./SingleProduct";
 import ErrorPage from "./ErrorPage";
 import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
+import { ThemeProvider as MUITheme } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Myaccount from "./Myaccount";
@@ -16,6 +18,17 @@ import Login from "./Login";
 import Signup from "./Signup";
 
 const App = () => {
+  const muiTheme = createTheme({
+    palette: {
+      primary: {
+        main: "#0a1435",
+      },
+      common: {
+        white: "#ffffff",
+      },
+    },
+  });
+
   const theme = {
     colors: {
       heading: "rgb(24 24 29)",
@@ -43,23 +56,25 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <GlobalStyle />
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products/*" element={<Products />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/singleproduct/:id" element={<SingleProduct />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/myaccount" element={<Myaccount />} />
-          <Route path="/myaccount/login" element={<Login />} />
-          <Route path="/myaccount/signup" element={<Signup />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-        <Footer />
-      </Router>
+      <MUITheme theme={muiTheme}>
+        <Router>
+          <GlobalStyle />
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products/*" element={<Products />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/singleproduct/:id" element={<SingleProduct />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/myaccount" element={<Myaccount />} />
+            <Route path="/myaccount/login" element={<Login />} />
+            <Route path="/myaccount/signup" element={<Signup />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+          <Footer />
+        </Router>
+      </MUITheme>
     </ThemeProvider>
   );
 };
