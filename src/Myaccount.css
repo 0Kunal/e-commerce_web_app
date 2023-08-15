@@ -1,0 +1,26 @@
+.my-account{
+    margin: 20px;
+    text-align: center;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    width: 300px;
+    height: 150px;
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: orange;
+}
+.card:hover{
+    /* background-color: lightblue; */
+}
+h3{
+    font-size: 18px;
+}
