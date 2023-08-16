@@ -119,7 +119,8 @@ const paymentOptions = [
 const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: theme.palette.primary.main,
-    padding: theme.spacing(4),
+    padding: 0,
+    // padding: theme.spacing(4),
     color: theme.palette.common.white,
   },
   column: {
@@ -162,67 +163,9 @@ const Footer = () => {
             </div>
           </div>
         </section>
-        {/* footer section */}
 
-        {/* <footer>
-          <div className="container grid grid-four-column">
-            <div className="footer-about">
-              <h3>Thapa Technical</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-            </div>
-            <div className="footer-subscribe">
-              <h3>Subscribe to get important updates</h3>
-              <form action="#">
-                <input type="email" name="email" placeholder="YOUR E-MAIL" />
-
-                <input type="submit" value="subscribe" />
-              </form>
-            </div>
-            <div className="footer-social">
-              <h3>Follow Us</h3>
-              <div className="footer-social--icons">
-                <div>
-                  <FaDiscord className="icons" />
-                </div>
-                <div>
-                  <FaInstagram className="icons" />
-                </div>
-                <div>
-                  <a
-                    href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
-                    target="_blank" rel="noreferrer">
-                    <FaYoutube className="icons" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="footer-contact">
-              <h3>Call Us</h3>
-              <h3>+91 12345678978</h3>
-            </div>
-          </div>
-
-          <div className="footer-bottom--section">
-            <hr />
-            <div className="container grid grid-two-column ">
-              <p>
-                @{new Date().getFullYear()} ThapaTechnical. All Rights Reserved
-              </p>
-              <div>
-                <p>PRIVACY POLICY</p>
-                <p>TERMS & CONDITIONS</p>
-              </div>
-            </div>
-          </div>
-        </footer> */}
         <footer className={classes.footer}>
-          <Grid
-            container
-            paddingX={5}
-            paddingY={2}
-            rowSpacing={3}
-            columnSpacing={1}
-          >
+          <Grid container paddingX={5} rowSpacing={3} columnSpacing={1}>
             <Grid container item xs={12} sm={3} md={3} direction={"column"}>
               <Grid item width={"fit-content"}>
                 <Typography
@@ -393,7 +336,7 @@ const Wrapper = styled.section`
   }
 
   footer {
-    padding: 14rem 0 9rem 0;
+    padding: 10rem 0 3rem 0;
     background-color: ${({ theme }) => theme.colors.footer_bg};
     h3 {
       color: ${({ theme }) => theme.colors.hr};
