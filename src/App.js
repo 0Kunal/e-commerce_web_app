@@ -16,6 +16,7 @@ import Footer from "./components/Footer";
 import Myaccount from "./Myaccount";
 import Login from "./Login";
 import Signup from "./Signup";
+import Register from "./Register";
 
 const App = () => {
   const muiTheme = createTheme({
@@ -69,7 +70,7 @@ const App = () => {
             <Route path="/cart" element={<Cart />} />
             <Route path="/myaccount" element={<Myaccount />} />
             <Route path="/myaccount/login" element={<Login />} />
-            <Route path="/myaccount/signup" element={<Signup />} />
+            <Route path="/myaccount/signup" element={<Register />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
           <Footer />
