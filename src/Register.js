@@ -36,6 +36,10 @@ const Register = () => {
                   variant="outlined"
                   fullWidth
                   required
+                  sx={{ fontSize: 14 }}
+                  inputProps={{
+                    style: { textTransform: "none" },
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -47,7 +51,6 @@ const Register = () => {
                   required
                 />
               </Grid>
-
               <Grid item xs={12}>
                 <RadioGroup
                   row
