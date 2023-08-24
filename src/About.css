@@ -1,0 +1,13 @@
+.aboutImg {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+.about {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 700px;
+  height: 500px;
+}
