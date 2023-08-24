@@ -15,8 +15,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Myaccount from "./Myaccount";
 import Login from "./Login";
-import Signup from "./Signup";
 import Register from "./Register";
+import Policy from "./Policy";
 
 const App = () => {
   const muiTheme = createTheme({
@@ -71,6 +71,7 @@ const App = () => {
             <Route path="/myaccount" element={<Myaccount />} />
             <Route path="/myaccount/login" element={<Login />} />
             <Route path="/myaccount/signup" element={<Register />} />
+            <Route path="/return-and-refund-policy" element={<Policy />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
           <Footer />
