@@ -33,11 +33,13 @@ const SingleProduct = () => {
 
   useEffect(() => {
     getSingleProduct(`${API}?id=${id}`);
-  },[]);
+  }, []);
 
   if (isSingleLoading) {
     return <div>Loading.....</div>;
   }
+
+  console.log("image: ", image);
 
   return (
     <Wrapper>
@@ -46,7 +48,16 @@ const SingleProduct = () => {
         <div className="grid grid-two-column">
           {/* product Images  */}
           <div className="product_images">
-            <MyImage imgs={image} />
+            {/* <MyImage imgs={image} /> */}
+            <img
+              src={image[0].url}
+              alt={image[0].filename}
+              style={{
+                objectFit: "cover",
+              }}
+              width={"100%"}
+              height={"70%"}
+            />
           </div>
 
           {/* product dAta  */}
