@@ -12,7 +12,8 @@ import {
 
 const Product = (curElem) => {
   const navigate = useNavigate();
-  const { id, name, image, price, category } = curElem;
+  console.log(curElem);
+  const { id, name, image_1, price, Category } = curElem;
   return (
     <Card
       sx={{ maxWidth: 300 }}
@@ -26,7 +27,7 @@ const Product = (curElem) => {
         <CardMedia
           component="img"
           alt={name}
-          image={image}
+          image={image_1.url}
           title={name}
           sx={{ height: 200, objectFit: "cover" }}
         />
@@ -37,7 +38,7 @@ const Product = (curElem) => {
                 {name}
               </Typography>
               <Typography variant="body2" color="textSecondary">
-                {category}
+                {Category}
               </Typography>
             </Grid>
             <Grid
