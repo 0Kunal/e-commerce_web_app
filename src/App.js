@@ -17,6 +17,7 @@ import Myaccount from "./Myaccount";
 import Login from "./Login";
 import Register from "./Register";
 import Policy from "./Policy";
+import "./App.css";
 
 const App = () => {
   const muiTheme = createTheme({
