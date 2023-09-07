@@ -112,7 +112,7 @@
 @media (max-width: 900px) {
   .mobile-navbar-btn {
     display: inline-block;
-    z-index: 9999;
+    /* z-index: 9999; */
     border: black;
 
     .mobile-nav-icon {

@@ -2,15 +2,20 @@ import styled from "styled-components";
 import FilterSection from "./components/FilterSection";
 import ProductList from "./components/ProductList";
 import Sort from "./components/Sort";
+import MobileFilter from "./components/mobileFilter";
+import { Box } from "@mui/material";
 // import { useFilterContext } from "./context/filter_context";
 
 const Products = () => {
   return (
     <Wrapper>
       <div className="container grid grid-filter-column">
-        <div>
+        <Box sx={{ display: { xs: "block", md: "none" } }}>
+          <MobileFilter />
+        </Box>
+        <Box sx={{ display: { xs: "none", md: "block" } }}>
           <FilterSection />
-        </div>
+        </Box>
 
         <section className="product-view--sort">
           <div className="sort-filter">
